@@ -1,0 +1,256 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+:root {
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --success: #22c55e;
+  --danger: #ef4444;
+  --dark: #111827;
+  --light-bg: #f8fafc;
+  --text-gray: #64748b;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--light-bg);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* --- 1. NAVIGATION BAR --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 8%;
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* --- 2. HOME PAGE (HERO) --- */
+.hero {
+  height: 80vh;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+}
+
+.shop-btn {
+  background: var(--white);
+  color: var(--primary);
+  padding: 16px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.shop-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* --- PRODUCT PAGE GRID (Fixed Back to Original) --- */
+.page-container {
+  padding: 2rem 5%;
+}
+
+.hed {
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.crdminn {
+  display: flex;       /* Grid ki jagah Flex use kar rahe hain jo pehle tha */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* --- PRODUCT CARD (Original Style) --- */
+.product-card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  width: 280px;        /* Fixed width jo pehle thi */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.buy-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.buy-btn:hover {
+  background: var(--primary-hover);
+}
+
+/* --- 4. ABOUT PAGE --- */
+.about-wrapper {
+  padding: 100px 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.about-container {
+  max-width: 700px;
+  background: white;
+  padding: 50px;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+/* --- 5. SUCCESS & CANCEL (THE FIXED CENTER FIX) --- */
+.status-page {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background-color: rgba(241, 245, 249, 0.95);
+  z-index: 2000;
+}
+
+.status-card {
+  background: white;
+  padding: 50px;
+  border-radius: 25px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+  text-align: center;
+  max-width: 450px;
+  width: 90%;
+  border-top: 12px solid var(--success);
+}
+
+.cancel-card { border-top-color: var(--danger); }
+
+.status-icon-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  font-size: 45px;
+  color: white;
+}
+
+.success-bg { background-color: var(--success); }
+.cancel-bg { background-color: var(--danger); }
+
+/* Unified Back to Home Button */
+.home-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: var(--success);
+  color: white !important;
+  padding: 15px 40px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+  border: none;
+}
+
+.cancel-card .home-btn { background-color: var(--danger); }
+
+.home-btn:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
